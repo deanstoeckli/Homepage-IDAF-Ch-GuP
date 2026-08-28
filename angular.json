@@ -30,7 +30,9 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "homepage-idaf-ch-gup.deanst.workers.dev"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts",
