@@ -32,7 +32,7 @@
             "security": {
               "allowedHosts": [
                 "homepage-idaf-ch-gup.deanst.workers.dev",
-                "*.homepage-idaf-ch-gup.deanst.workers.dev"
+                "*-homepage-idaf-ch-gup.deanst.workers.dev"
               ]
             },
             "ssr": {
