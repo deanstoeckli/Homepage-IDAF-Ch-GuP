@@ -1,3 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --page-bg: #eef4ff;
+  --panel-bg: #ffffff;
+  --panel-alt: #f8fafc;
+  --panel-soft: #eef2ff;
+  --border-soft: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(59, 130, 246, 0.18);
+  --text-strong: #0f172a;
+  --text-muted: #475569;
+  --shadow-soft: 0 18px 38px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 26px 52px rgba(15, 23, 42, 0.12);
+}
 
-@import 'tailwindcss';
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Roboto, 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #edf3ff 0%, #f8fafc 100%);
+  color: var(--text-strong);
+  overscroll-behavior: none;
+}

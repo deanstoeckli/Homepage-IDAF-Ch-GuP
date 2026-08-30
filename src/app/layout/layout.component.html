@@ -1,0 +1,47 @@
+<mat-sidenav-container class="layout-shell">
+  <mat-sidenav
+    #drawer
+    class="app-sidenav"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-nav-list>
+      @for (item of routes; track item.path) {
+        <a
+          mat-list-item
+          [routerLink]="item.path"
+          #link="routerLinkActive"
+          routerLinkActive="active-link"
+          [activated]="link.isActive"
+        >
+          <span>{{ item.data?.['title'] }}</span>
+        </a>
+      }
+
+      @if (!isStartRoute) {
+        <a mat-list-item [routerLink]="''" class="back-link">
+          <span>Zurück zur Startseite</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="topbar">
+      @if (isHandset$ | async) {
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <span class="menu-label">☰</span>
+        </button>
+      }
+
+      <div class="topbar-title">
+        <span>{{ actualRoute?.title ?? 'Start' }}</span>
+      </div>
+    </mat-toolbar>
+
+    <main class="content-wrapper">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
