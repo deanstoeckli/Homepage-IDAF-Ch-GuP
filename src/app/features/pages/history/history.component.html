@@ -1,0 +1,58 @@
+<section class="page-shell">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Quellenanalyse</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et volutpat erat. Curabitur
+        accumsan, magna non posuere ullamcorper, lectus mi tincidunt lorem, et vulputate nunc erat
+        at turpis.
+      </p>
+      <div class="placeholder-box">
+        <strong>Texteintrag:</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec malesuada massa, vel posuere arcu. Duis efficitur, lorem a volutpat elementum, augue sapien condimentum sapien, vitae fermentum velit lectus a lorem.</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="card-pair">
+    <mat-card *ngFor="let card of imageCards" class="image-card">
+      <mat-card-header>
+        <mat-card-title>{{ card.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="image-frame small-image">
+          <img [src]="card.src" [alt]="card.alt" />
+        </div>
+        <p class="caption">{{ card.caption }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Quellenverzeichnis</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Quelle 1: [Titel, Autor, Jahr, Ort]</li>
+        <li>Quelle 2: [Titel, Autor, Jahr, Ort]</li>
+        <li>Quelle 3: [Titel, Autor, Jahr, Ort]</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Abbildungsverzeichnis</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Abbildung 1: Titel der Abbildung</li>
+        <li>Abbildung 2: Titel der Abbildung</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</section>
