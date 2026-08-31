@@ -8,7 +8,7 @@
   min-height: 100vh;
   width: 100%;
   display: block;
-  background: linear-gradient(180deg, #edf3ff 0%, #f7f9fc 100%);
+  background: #ffffff;
 }
 
 .mat-sidenav-content {
@@ -25,7 +25,7 @@
   bottom: 0;
   width: 280px;
   border-right: 1px solid rgba(15, 23, 42, 0.08);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: #dbeafe;
   box-shadow: 12px 0 30px rgba(15, 23, 42, 0.06);
   padding: 0;
   overflow: hidden;
@@ -41,12 +41,17 @@ mat-nav-list {
 }
 
 mat-nav-list a {
-  border-radius: 0;
-  margin: 0;
-  padding-left: 0;
+  border-radius: 12px;
+  margin: 0.25rem 0.75rem;
+  padding: 0 1rem;
   color: #1f2a37;
   font-size: 0.98rem;
   letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+}
+
+mat-nav-list a:hover {
+  background: rgba(59, 130, 246, 0.08) !important;
 }
 
 mat-nav-list a span {
@@ -55,13 +60,13 @@ mat-nav-list a span {
 }
 
 mat-nav-list a.active-link,
-mat-nav-list a[mat-list-item].mat-list-item-active {
-  background: linear-gradient(90deg, rgba(29, 78, 216, 0.12), rgba(59, 130, 246, 0.04)) !important;
-  color: #1d4ed8 !important;
+mat-nav-list a.mat-list-item.mat-list-item-active {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
   font-weight: 600;
-  box-shadow: inset 3px 0 0 #1d4ed8, 0 8px 20px rgba(29, 78, 216, 0.08);
-  margin-left: 0;
-  padding-left: 0;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  margin: 0.25rem 0.75rem;
+  padding: 0 1rem; 
 }
 
 .back-link {
