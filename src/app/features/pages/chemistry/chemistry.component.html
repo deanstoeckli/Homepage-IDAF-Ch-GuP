@@ -1,19 +1,51 @@
-<section class="page-shell">
+<section class="page-shell chemistry-page">
+  <mat-card class="intro-card">
+    <mat-card-header>
+      <mat-card-title>Chemischer Teil – Destillation eines Ethanol-Wasser-Gemisches</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="lead">
+        <strong>Fragestellung:</strong> Wie beeinflussen die unterschiedlichen Siedetemperaturen von
+        Ethanol und Wasser die Trennung eines 60 % Ethanol – 40 % Wasser-Gemisches durch Destillation?
+      </p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Prinzip der Destillation</h3>
+          <p>
+            Je grösser der Unterschied zwischen den Siedetemperaturen der enthaltenen Stoffe ist,
+            desto besser lassen sie sich durch Destillation trennen. Dadurch kann die Trennung deutlicher
+            beobachtet und ausgewertet werden.
+          </p>
+        </div>
+        <div class="info-box">
+          <h3>Versuchsziele</h3>
+          <p>
+            Ziel war es, die getrennten Fraktionen des Destillats zu vergleichen, ihre Dichte zu messen
+            und daraus den Alkoholgehalt der einzelnen Anteile abzuschätzen.
+          </p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Dokumentation</mat-card-title>
+      <mat-card-title>Versuchsablauf</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.
+        Die Siedesteinchen sorgen dafür, dass die Mischung gleichmässig und kontrolliert siedet und
+        ein plötzliches Aufkochen verhindert wird. Danach wurde die Apparatur aufgebaut und jeweils
+        2 mL der Mischung in kleinen Reagenzgläsern aufgefangen. Anschließend wurden die Destillate
+        auf ihre Dichte untersucht, um daraus den Alkoholgehalt zu bestimmen.
       </p>
-      <div class="placeholder-box">
-        <strong>Texteintrag:</strong>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, eros ac dictum semper, velit urna commodo nulla, id luctus justo elit sit amet lectus.</p>
-      </div>
+      <ul class="check-list">
+        <li>Flüssigkeit im Kolben: 60 % Ethanol und 40 % Wasser</li>
+        <li>Ethanol verdampft leichter und daher zuerst</li>
+        <li>Das kondensierte Destillat wird als erste Fraktion aufgefangen</li>
+        <li>Spätere Fraktionen enthalten zunehmend mehr Wasser</li>
+      </ul>
     </mat-card-content>
   </mat-card>
 
@@ -24,10 +56,70 @@
       </mat-card-header>
       <mat-card-content>
         <div class="image-frame small-image">
-          <img [src]="card.src" [alt]="card.alt" />
+          <img [ngSrc]="card.src" [alt]="card.alt" width="800" height="450" />
         </div>
         <p class="caption">{{ card.caption }}</p>
       </mat-card-content>
     </mat-card>
   </div>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Ergebnisse und Messdaten</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Fraktion</th>
+            <th>Temperatur</th>
+            <th>Dichte</th>
+            <th>Alkoholgehalt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of results">
+            <td>{{ row.phase }}</td>
+            <td>{{ row.temperature }}</td>
+            <td>{{ row.density }}</td>
+            <td>{{ row.alcohol }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Die Messung zeigt: Die Temperatur steigt während der Destillation von etwa 71 °C bis auf
+        99–100 °C, während die Dichte von circa 0,81 g/mL auf ungefähr 1,00 g/mL ansteigt. Der
+        Alkoholgehalt nimmt dagegen von ungefähr 96 % auf 0 % ab. Diese Veränderungen hängen
+        zusammen: Je mehr Ethanol bereits verdampft und aufgefangen wurde, desto wasserreicher wird
+        das später entstehende Destillat.
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Abweichungen und Reflexion</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Zu Beginn wurden 50 mL des Ethanol-Wasser-Gemisches in den Rundkolben gegeben. Insgesamt
+        konnten 20 mL Destillat aufgefangen werden. Dadurch besteht eine Differenz von 30 mL, die
+        vermutlich durch Verluste während der Destillation und beim Auffangen entstanden ist.
+      </p>
+      <p>
+        Der theoretische Siedepunkt von Ethanol liegt bei etwa 78 °C. Im Versuch lag das erste
+        Destillat bei etwa 71 °C, also leicht darunter. Der letzte Destillatsanteil lag mit 99–100 °C
+        nahe am theoretischen Siedepunkt von Wasser. Die gemessene Dichte von etwa 0,81 g/mL für
+        das erste Destillat und 1,00 g/mL für das letzte stimmt damit sehr gut mit den theoretischen
+        Werten überein.
+      </p>
+      <p>
+        Insgesamt zeigt sich, dass die Destillation funktioniert hat. Die Diagramme und Messdaten
+        bestätigen, dass die ersten Destillate einen höheren Ethanolanteil besitzen und später immer
+        mehr Wasser enthalten. Damit ist der Zusammenhang zwischen Siedepunkt, Trennung und
+        Zusammensetzung des Gemisches klar nachgewiesen.
+      </p>
+    </mat-card-content>
+  </mat-card>
 </section>

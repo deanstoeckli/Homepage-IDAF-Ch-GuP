@@ -13,13 +13,13 @@ export class HistoryComponent {
   imageCards = [
     {
       title: 'Abbildung 1',
-      src: '/example-landscape.svg',
+      src: '/',
       alt: 'Historische Abbildung 1',
       caption: 'Erste historische Bildplatzierung.',
     },
     {
       title: 'Abbildung 2',
-      src: '/example-landscape.svg',
+      src: '/',
       alt: 'Historische Abbildung 2',
       caption: 'Zweite historische Bildplatzierung.',
     },
