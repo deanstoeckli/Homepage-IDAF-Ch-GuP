@@ -1,8 +1,2 @@
-html,
-body {
-  font-family: Roboto, 'Segoe UI', sans-serif;
-}
+/* App component styles - global app-level overrides if needed */
 
-body {
-  margin: 0;
-}
